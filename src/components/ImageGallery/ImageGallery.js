@@ -66,7 +66,7 @@ class ImageGallery extends Component {
   };
 
   render() {
-    const { images, status, error } = this.state;
+    const { images, status, error, alt, largeImageURL } = this.state;
     if (status === "idle") {
       return <p>Enter the name of the picture</p>;
     }
@@ -96,10 +96,10 @@ class ImageGallery extends Component {
             );
           })}
           <Button onClick={this.loadMore} />
-          {this.state.largeImageURL && (
+          {largeImageURL && (
             <Modal
-              largeImageURL={this.state.largeImageURL}
-              alt={this.state.alt}
+              largeImageURL={largeImageURL}
+              alt={alt}
               onClick={this.modalClose}
             />
           )}

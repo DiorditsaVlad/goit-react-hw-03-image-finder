@@ -16,8 +16,8 @@ const ImageGalleryItem = ({ webformatURL, largeImageURL, tags, modalOpen }) => {
 export default ImageGalleryItem;
 
 ImageGalleryItem.propTypes = {
-  webformatURL: PropTypes.string,
-  largeImageURL: PropTypes.string,
-  modalOpen: PropTypes.func,
-  tags: PropTypes.string,
+  webformatURL: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  modalOpen: PropTypes.func.isRequired,
+  tags: PropTypes.string.isRequired,
 };
