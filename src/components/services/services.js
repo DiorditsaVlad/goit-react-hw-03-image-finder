@@ -1,5 +1,5 @@
 /////////////////////////////////////////
-function fetchImage(searchName, pages) {
+export default function fetchImage(searchName, pages) {
   const key = `23634410-bd912d8d36772bd1c0bd0325c`;
   return fetch(
     `https://pixabay.com/api/?q=${searchName}&page=${pages}&key=${key}&image_type=photo&orientation=horizontal&per_page=12`
@@ -10,6 +10,5 @@ function fetchImage(searchName, pages) {
     return Promise.reject(new Error(`no images on request`));
   });
 }
-const api = { fetchImage };
-export default api;
+
 ///////////////////////////////////////////

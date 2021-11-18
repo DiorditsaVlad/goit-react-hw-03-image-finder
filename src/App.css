@@ -40,3 +40,10 @@
     transform: rotate(360deg);
   }
 }
+p {
+  text-align: center;
+}
+div {
+  display: block;
+  text-align: center;
+}
