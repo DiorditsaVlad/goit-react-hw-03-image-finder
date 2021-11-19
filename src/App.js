@@ -39,6 +39,10 @@ class App extends Component {
             page: prevState.page + 1,
             searchbar: searchbar,
           }));
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
         }
       })
       .catch((error) => this.setState({ error, status: "rejected" }));
@@ -46,10 +50,10 @@ class App extends Component {
 
   loadMore = () => {
     this.fetchImageApi();
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
+    // window.scrollTo({
+    //   top: document.documentElement.scrollHeight,
+    //   behavior: "smooth",
+    // });
   };
 
   modalOpen = (moduleUrl, moduleAlt) => {
